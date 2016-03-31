@@ -2,7 +2,7 @@
 
 extern crate iron;
 #[macro_use] extern crate router;
-extern crate pad;
+extern crate padme;
 extern crate rustc_serialize;
 
 mod handler;

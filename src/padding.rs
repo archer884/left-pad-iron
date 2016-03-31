@@ -1,4 +1,4 @@
-use pad::{PadStr, Alignment};
+use padme::Pad;
 
 pub struct PaddingRequest {
     length: usize,
@@ -26,7 +26,7 @@ pub struct PaddingResponse {
 pub fn left(params: PaddingRequest) -> PaddingResponse {
     PaddingResponse {
         length: params.length,
-        padded: params.content.pad(params.length, params.padding_character, Alignment::Right, true),
+        padded: params.content.pad_left(params.length, params.padding_character),
         original: params.content.to_owned(),
     }
 }
@@ -34,7 +34,7 @@ pub fn left(params: PaddingRequest) -> PaddingResponse {
 pub fn right(params: PaddingRequest) -> PaddingResponse {
     PaddingResponse {
         length: params.length,
-        padded: params.content.pad(params.length, params.padding_character, Alignment::Left, true),
+        padded: params.content.pad_right(params.length, params.padding_character),
         original: params.content.to_owned(),
     }
 }
