@@ -1,0 +1,10 @@
+[package]
+name = "left-pad-iron"
+version = "0.1.0"
+authors = ["J/A <archer884@gmail.com>"]
+
+[dependencies]
+iron = "*"
+pad = { git = "https://github.com/ogham/rust-pad.git" }
+router = "*"
+rustc-serialize = "*"
