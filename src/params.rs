@@ -23,12 +23,12 @@ impl fmt::Display for ParamsError {
 
 impl Error for ParamsError {
     fn description(&self) -> &str {
-        match self {
-            &ParamsError::MissingParams => "params are missing",
-            &ParamsError::MissingContent => "str is missing",
-            &ParamsError::MissingLength => "missing length",
-            &ParamsError::BadLength => "unable to parse len",
-            &ParamsError::LengthTooLong => "illegal padding length",
+        match *self {
+            ParamsError::MissingParams => "params are missing",
+            ParamsError::MissingContent => "str is missing",
+            ParamsError::MissingLength => "missing length",
+            ParamsError::BadLength => "unable to parse len",
+            ParamsError::LengthTooLong => "illegal padding length",
         }
     }
 }
