@@ -4,6 +4,7 @@ version = "0.1.0"
 authors = ["J/A <archer884@gmail.com>"]
 
 [dependencies]
+clippy = "*"
 iron = "*"
 padme = { git = "https://github.com/archer884/padme.git" }
 router = "*"
