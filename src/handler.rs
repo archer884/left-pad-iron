@@ -11,10 +11,6 @@ pub fn help(_: &mut Request) -> IronResult<Response> {
     )))
 }
 
-pub fn pad(request: &mut Request) ->  IronResult<Response> {
-    left(request)
-}
-
 pub fn left(request: &mut Request) ->  IronResult<Response> {
     Ok(Response::with((
         status::Ok,

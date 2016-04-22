@@ -51,7 +51,7 @@ pub fn read_params(url: &Url) -> Result<PaddingRequest, ParamsError> {
             
             let length = key_value_pairs.get("len")
                 .ok_or(ParamsError::MissingLength)
-                .and_then(|length| length.parse().map_err(|_| ParamsError::MissingLength));
+                .and_then(|length| length.parse().map_err(|_| ParamsError::BadLength));
                     
             match length {
                 Err(e) => Err(e),
